@@ -15,6 +15,10 @@
                 texto = prompt("Digite um texto qualquer: ");
                 document.getElementById("minhaDiv2").innerHTML = texto;
             }
+            function escreveDiv3(arg){
+                arg = prompt("Digite um número de 1 a n: ");
+                document.getElementById("minhaDiv3").innerHTML = arg;
+            }
         </script>
     </head>
     <body>
@@ -35,6 +39,12 @@
         <h1>Escrevendo no Texto Dinâmico</h1>
         <button onclick="escreveDiv2()">Escreve</button><br>
         <div id="minhaDiv2"></div>
+
+        <hr>
+        <h1>Desafio</h1>
+        <button onclick="escreveDiv3('Texto escrito na Div 3')">Escreve números</button><br>
+        <div id="minhaDiv3"></div>
+
     </body>
 
 
