@@ -17,6 +17,9 @@
             }
             function escreveDiv3(arg){
                 arg = prompt("Digite um número de 1 a n: ");
+                for (var i = 1; i <= arg; i++) {
+                    document.getElementById("minhaDiv3").innerHTML += i + "<br>";
+                }
                 document.getElementById("minhaDiv3").innerHTML = arg;
             }
         </script>
