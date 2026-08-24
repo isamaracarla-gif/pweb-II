@@ -11,6 +11,10 @@
             function escreveDiv(texto){
                 document.getElementById("minhaDiv").innerHTML = texto;
             }
+            function escreveDiv2(texto){
+                texto = prompt("Digite um texto qualquer: ");
+                document.getElementById("minhaDiv2").innerHTML = texto;
+            }
         </script>
     </head>
     <body>
@@ -26,6 +30,11 @@
 
         <button onclick="escreveDiv('<h1> Programação Web </h1>')">Escreve</button><br>
         <div id="minhaDiv"></div>
+
+        <hr>
+        <h1>Escrevendo no Texto Dinâmico</h1>
+        <button onclick="escreveDiv2()">Escreve</button><br>
+        <div id="minhaDiv2"></div>
     </body>
 
 
