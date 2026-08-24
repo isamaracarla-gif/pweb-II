@@ -8,15 +8,23 @@
                 var msg = 'A Raiz Quadrada é: ';
                 alert(msg + raiz);
             }
+            function escreveDiv(arg){
+                document.getElementById("minhaDiv").innerHTML = texte;
+            }
         </script>
     </head>
     <body>
 
         <h1>Raiz Quadrada</h1>
 
-        <button onclick="minhaFuncao(25)">Raiz de 25 </button>
-        <button onclick="minhaFuncao(36)">Raiz de 36 </button>
-        <button onclick="minhaFuncao(49)">Raiz de 49 </button>
+        <button onclick="minhaFuncao(25)">Raiz de 25 </button><br>
+        <button onclick="minhaFuncao(36)">Raiz de 36 </button><br>
+        <button onclick="minhaFuncao(49)">Raiz de 49 </button><br
+
+        <h1>Escrevendo na Div</h1>
+
+        <button onclick="escreveDiv('<h1> Programação Web </h1>')">Escreve</button><br>
+        <div id="minhaDiv"></div>
     </body>
 
 
