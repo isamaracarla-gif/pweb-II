@@ -5,7 +5,11 @@
         <script type="text/javascript">
             function minhaFuncao(arg1, arg2) {
                 var soma = arg1 + arg2;
-                alert('A Soma é: ' + soma);
+                var msg = 'A Soma é: ' + soma;
+                alert(msg + soma);
+            }
+            function escreve(arg){
+                document.write(arg);
             }
         </script>
     </head>
@@ -15,7 +19,7 @@
         
 
         <button onclick="minhaFuncao(10,20)">Clique </button>
-        
+        <button onclick="escreve('<h1>PROGRAMAÇÃO WEB</h1>')">Escreve</button>
     </body>
 
 
