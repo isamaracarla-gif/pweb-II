@@ -15,17 +15,24 @@
                 texto = prompt("Digite um texto qualquer: ");
                 document.getElementById("minhaDiv2").innerHTML = texto;
             }
-            function escreveDiv3(arg){
-                arg = prompt("Digite um número de 1 a n: ");
-                for (var i = 1; i <= arg; i++) {
-                    document.getElementById("minhaDiv3").innerHTML += i + "<br>";
-                var n = parseInt(prompt("Digite o valor de N:"));
-                if (isNaN(n) || n <= 0) {
+            function escreveDiv3(){
+
+                 var n = parseInt(prompt("Digite o valor de N:"));
+
+                 if (isNaN(n) || n <= 0) {
                     alert("Por favor, insira um número válido maior que zero.");
-                    return;}
+                    return;
+                }         
+
+                for (var i = 1; i <= n; i++) {
+                    document.getElementById("minhaDiv3").innerHTML += i + "<br>";
                 }
+                         
                 
             }
+
+
+            /*
             function escreverNumerosInput() {
                 var input = document.getElementById("numeroInput");
                 var n = parseInt(input.value);
@@ -39,6 +46,8 @@
                     div.innerHTML += i + "<br>";
                 }
             }
+
+            */
 
         </script>
     </head>
