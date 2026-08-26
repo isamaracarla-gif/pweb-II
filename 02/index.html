@@ -22,7 +22,20 @@
                 }
                 
             }
-            
+            function escreverNumerosInput() {
+                var input = documet.getElementById("numeroInput");
+                var n = parseInt(input.value);
+                if (isNaN(n) || n <= 0) {
+                    alert("Por favor, insira um número válido maior que zero.");
+                    return;
+                }
+                var div = document.getElementById("numerosInput");
+                div.innerHTML = ""; 
+                for (var i = 1; i <= n; i++) {
+                    div.innerHTML += i + "<br>";
+                }
+            }
+
         </script>
     </head>
     <body>
