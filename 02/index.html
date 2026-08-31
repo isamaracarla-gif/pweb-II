@@ -54,8 +54,11 @@
             
                 var raiz = Math.sqrt(n);
                 div.innerHTML += "<br>A raiz quadrada de " + n + " é: " + raiz;
-                var msg = 'A Raiz Quadrada é: ';
-                alert(msg + raiz);
+                for (var i = 1; i <= n; i++) {
+                    div.innerHTML += "<br>" + i;
+                }
+                
+                
             }
 
             
