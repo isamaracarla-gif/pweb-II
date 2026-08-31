@@ -44,7 +44,7 @@
                     div.innerHTML += i + "<br>";
                 }
             }
-            function escreverNumerosInput2() {
+            function raizdeN() {
                 var input = document.getElementById("numeroInput");
                 var n = parseInt(input.value);
                 if (isNaN(n) || n <= 0) {
@@ -56,7 +56,7 @@
                 for (var i = 1; i <= n; i++) {
                     div.innerHTML += i + "<br>";
                 }
-                var raizdeN = Math.sqrt(n);
+                var raiz = Math.sqrt(n);
                 div.innerHTML += "<br>A raiz quadrada de " + n + " é: " + raiz;
                 
             }
@@ -99,8 +99,8 @@
          <hr>
         <h1>Desafio: Raiz Quadrada de N</h1>
         <label for ="numeroInput">Digite o valor de N:</label>
-        <input type="number" id="numeroInput" placeholder="Digite um número" min="1">
-        <button onclick="escreverNumerosInput2()">Raiz de N</button> <br><br>
+        <input type="number" id="numeroInput">
+        <button onclick="raizdeN()">Raiz de N</button> <br><br>
         <div id="numerosInput"></div>
 
     </body>
