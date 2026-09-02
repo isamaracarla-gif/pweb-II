@@ -13,8 +13,8 @@
             linguagens[6] = 'C ++';
 
             function mostrarListaLinguagens() {
-            const container = document.getElementById('minhaDiv');
-                for (var i = 0; i < linguagens.lenght; i++) {
+                const container = document.getElementById('minhaDiv');
+                for (var i = 0; i < linguagens.length; i++) {
                     var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
                     container.innerHTML += tag;
                 }
@@ -24,13 +24,19 @@
             var indice = prompt('Qual posição da lista deseja consultar? ');
             alert(linguagens[indice]);
         }
+            
         </script>
     </head>
     <body>
         <h1>Array de Linguagens</h1>
 
         <button onclick="mostrarListaLinguagens()">Criar Array</button> <br><br>
+        
         <button onclick="posicaoLinguagens()">Posição no Array</button>
 
         <div id="minhaDiv"></div>
+        <hr>
+        <h1>Array de Frutas</h1>
+
+
     </body>
