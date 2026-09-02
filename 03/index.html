@@ -24,7 +24,26 @@
             var indice = prompt('Qual posição da lista deseja consultar? ');
             alert(linguagens[indice]);
         }
-            
+
+            let frutas = Array();
+            frutas[0] = 'Banana';
+            frutas[1] = 'Maçã';
+            frutas[2] = 'Pera';
+            frutas[3] = 'Uva';
+            frutas[4] = 'Melancia';
+            frutas[5] = 'Abacaxi';
+            frutas[6] = 'Manga';
+            function mostrarListaFrutas() {
+                const container = document.getElementById('minhaDiv2');
+                for (var i = 0; i < frutas.length; i++) {
+                    var tag = '<h5>' + i + ' - ' + frutas[i] + '</h5>';
+                    container.innerHTML += tag;
+                }
+            }
+        function posicaoFrutas(){
+            var indice = prompt('Qual posição da lista deseja consultar? ');
+            alert(frutas[indice]);
+        }
         </script>
     </head>
     <body>
@@ -37,6 +56,10 @@
         <div id="minhaDiv"></div>
         <hr>
         <h1>Array de Frutas</h1>
-
-
+        
+        <button onclick="mostrarListaFrutas()">Criar Array</button> <br><br>
+        
+        <button onclick="posicaoFrutas()">Posição no Array</button>
+        
+        <div id="minhaDiv2"></div>
     </body>
