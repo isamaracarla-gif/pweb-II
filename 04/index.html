@@ -16,8 +16,11 @@
             }
             function adicionar(){
                 var nome = prompt('Qual o nome da pessoa?');
+                var n = parseInt(prompt(""));
                 if (nome === '') 
                     alert('Nome Invalido'); 
+                if (nome === n )
+                    alert('Nome inválido!')
                 else{
                     pilhaPessoas.push(nome);
                     mostrarLista();
