@@ -16,10 +16,9 @@
             }
             function adicionar(){
                 var nome = prompt('Qual o nome da pessoa?');
-                if (nome < 0 || nome >= pilhaPessoas.length) {
-                    
-                    return;}
-                    alert('Nome Inválida!');              
+                if (pilhaPessoas.length === number) {
+                    alert('Nome Inválida!');
+                    return;}        
                     pilhaPessoas.push(nome);
                 mostrarLista();
             }
