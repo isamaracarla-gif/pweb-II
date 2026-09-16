@@ -15,17 +15,27 @@
 
             }
             function adicionar(){
-                var nome = prompt('Qual o nome da pessoa?');
-                var n = parseInt(prompt(""));
-                if (nome === '') 
-                    alert('Nome Invalido'); 
-                if (nome === n )
-                    alert('Nome inválido!')
+                let nome = prompt("Digite o seu nome completo:");
+
+                nome = nome ? nome.trim() : "";
+
+                // Expressão regular que aceita letras (com acentos) e espaços
+                const regexNome = /^[A-Za-záàâãéèêíïóôõõúüçñÁÀÂÃÉÈÍÏÓÔÕÖÚÜÇÑ\s]+$/;
+
+                if (nome === null || nome === "") {
+                    alert("O campo não pode estar vazio ou a operação foi cancelada.");
+                }
+                else 
+                if (!regexNome.test(nome)) {
+                    alert("Por favor, digite um nome válido (apenas letras e espaços).");
+                }
                 else{
                     pilhaPessoas.push(nome);
                     mostrarLista();
                 }
             }
+
+            
             function posicao() {
                 // pede o índice
                 var indice = prompt('Qual posição da lista deseja consultar?');
