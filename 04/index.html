@@ -16,10 +16,12 @@
             }
             function adicionar(){
                 var nome = prompt('Qual o nome da pessoa?');
-                if (nome === number) {
-                alert('Nome Invalido'); }
-                pilhaPessoas.push(nome);
-                mostrarLista();
+                if (nome === '') 
+                    alert('Nome Invalido'); 
+                else{
+                    pilhaPessoas.push(nome);
+                    mostrarLista();
+                }
             }
             function posicao() {
                 // pede o índice
