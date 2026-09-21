@@ -2,19 +2,19 @@
 <html lang="pt-BR">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Pessoas</title>
+  <title>Lista de Livros</title>
 
   <script>
     
-    let pilhaPessoas = [];
+    let pilhaLivros = [];
 
     function mostrarLista() {
       const container = document.getElementById('minhaDiv');
       container.innerHTML = ''; 
 
-      for (let i = 0; i < pilhaPessoas.length; i++) {
-        const pessoa = pilhaPessoas[i];
-        const tag = '<h5>' + i + '- Nome: ' + pessoa.nome + ' | Contato: '+ pessoa.contato + '</h5>';
+      for (let i = 0; i < pilhaLivros.length; i++) {
+        const livro = pilhaLivros[i];
+        const tag = '<h5>' + i + '- Nome: ' + livro.nome + ' | Contato: '+ livro.autor + '</h5>';
         container.innerHTML += tag;
       }
     }
