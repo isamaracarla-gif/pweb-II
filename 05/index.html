@@ -20,15 +20,15 @@
     }
 	
 	function limpaCampos() {
-	  document.getElementById('Titulo').value = '';
-      document.getElementById('Autor').value = '';
-      document.getElementById('Ano').value = '';
+	  document.getElementById('titulo').value = '';
+      document.getElementById('autor').value = '';
+      document.getElementById('ano').value = '';
 	}
 
     function adicionar() {
 	  // pega os valores digitados nos inputs
-  	  const nome = document.getElementById('nome').value;
-      const contato = document.getElementById('contato').value;
+  	  const titulo = document.getElementById('titulo').value;
+      const autor = document.getElementById('autor').value;
       const ano = document.getElementById('ano').value;
 
       pilhaLivros.push({ titulo, autor, ano });
@@ -60,7 +60,7 @@
         alert('A pilha está vazia!');
       } else {
         const removido = pilhaLivros.pop();
-        alert('Removido: ' + removido.nome + ' - ' + removido.contato);
+        alert('Removido: ' + removido.titulo + ' - ' + removido.autor + '-' + removido.ano);
         mostrarLista();
       }
     }
@@ -76,13 +76,13 @@
   <h1>Lista de Livros</h1>
 
 	<label>Titulo:</label>
-	<input type="text" id="Titulo" placeholder="Digite o Titulo do Livro"> 
+	<input type="text" id="titulo" placeholder="Digite o Titulo do Livro"> 
 
 	<label>Autor:</label>
-	<input type="text" id="Autor" placeholder="Digite o Nome do Autor">
+	<input type="text" id="utor" placeholder="Digite o Nome do Autor">
 
   <label>Ano:</label>
-	<input type="text" id="Ano" placeholder="Digite o Ano de Publicação">
+	<input type="text" id="ano" placeholder="Digite o Ano de Publicação">
 
 	<button onclick="adicionar()">Adicionar</button>
 	
