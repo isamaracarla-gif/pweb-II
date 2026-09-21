@@ -14,7 +14,7 @@
 
       for (let i = 0; i < pilhaLivros.length; i++) {
         const livro = pilhaLivros[i];
-        const tag = '<h5>' + i + '- Titulo: ' + livro.nome + ' | Autor: '+ livro.autor + '</h5>';
+        const tag = '<h5>' + i + '- Titulo: ' + livro.nome + ' | Autor: '+ livro.autor +  '| Ano: ' + livro.ano+ '</h5>';
         container.innerHTML += tag;
       }
     }
@@ -47,7 +47,7 @@
       }
 
       const titulo = pilhaLivros[indice];
-      alert('Na posição ' + indice + ' está: Nome: ' + livro.nome + ' - autor: ' + livro.autor );
+      alert('Na posição ' + indice + ' está: Nome: ' + livro.nome + ' - Autor: ' + livro.autor ' - Ano: ' + livro.ano );
     }
 
     function limparLista() {
@@ -73,13 +73,16 @@
 </head>
 
 <body>
-  <h1>Lista de Pessoas</h1>
+  <h1>Lista de Livros</h1>
 
-	<label>Nome:</label>
-	<input type="text" id="titulo" placeholder="Digite o Titulo"> 
+	<label>Titulo:</label>
+	<input type="text" id="titulo" placeholder="Digite o Titulo do Livrp"> 
 
-	<label>Contato:</label>
-	<input type="text" id="autor" placeholder="Digite o Autor">
+	<label>Autor:</label>
+	<input type="text" id="autor" placeholder="Digite o Nome do Autor">
+
+  <label>Ano:</label>
+	<input type="text" id="ano" placeholder="Digite o Ano de Publicação">
 
 	<button onclick="adicionar()">Adicionar</button>
 	
