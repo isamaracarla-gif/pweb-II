@@ -21,14 +21,14 @@
 	
 	function limpaCampos() {
 	  document.getElementById('titulo').value = '';
-      document.getElementById('autor').value = '';
-      document.getElementById('ano').value = '';
+    document.getElementById('autor').value = '';
+    document.getElementById('ano').value = '';
 	}
 
     function adicionar() {
 	  // pega os valores digitados nos inputs
   	  const titulo = document.getElementById('titulo').value;
-      const autor = document.getElementById('autor').value;
+      const autor = 'teste'; //document.getElementById('autor').value;
       const ano = document.getElementById('ano').value;
 
       pilhaLivros.push({ titulo, autor, ano });
@@ -79,7 +79,7 @@
 	<input type="text" id="titulo" placeholder="Digite o Titulo do Livro"> 
 
 	<label>Autor:</label>
-	<input type="text" id="utor" placeholder="Digite o Nome do Autor">
+	<input type="text" id="autor" placeholder="Digite o Nome do Autor">
 
   <label>Ano:</label>
 	<input type="text" id="ano" placeholder="Digite o Ano de Publicação">
