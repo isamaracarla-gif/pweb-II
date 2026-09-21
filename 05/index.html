@@ -28,7 +28,7 @@
     function adicionar() {
 	  // pega os valores digitados nos inputs
   	  const titulo = document.getElementById('titulo').value;
-      const autor = 'teste'; //document.getElementById('autor').value;
+      const autor = document.getElementById('autor').value;
       const ano = document.getElementById('ano').value;
 
       pilhaLivros.push({ titulo, autor, ano });
@@ -47,7 +47,7 @@
       }
 
       const titulo = pilhaLivros[indice];
-      alert('Na posição ' + indice + ' está: Nome: ' + livro.nome + ' - Autor: ' + livro.autor + ' - Ano: ' + livro.ano );
+      alert('Na posição ' + indice + ' está: Nome: ' + livro.livro + ' - Autor: ' + livro.autor + ' - Ano: ' + livro.ano );
     }
 
     function limparLista() {
