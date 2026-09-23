@@ -78,39 +78,31 @@
 	
 	function salvar() {
 		// implementar função salvar
-      const fs = require('fs');{
-    try {
-        const jsonString = JSON.stringify(dados, null, 2);
-        fs.writeFileSync(nomeArquivo, jsonString, 'utf-8');
-        console.log("Dados salvos com sucesso!");
-        return true;
-    } catch (erro) {
-        console.error("Erro ao salvar:", erro);
-        return false;}
+    const curso = document.getElementById('curso').value.trim();
+    const regime = document.getElementById('regime').value.trim();
+    const carga = document.getElementById('carga').valye.trim();
+
+    if (indiceEdicao == null) {
+      pilhacursos.push({curso, regime, carga});
+      indiceEdicao == null;
     }
+    else{
+      pilhacursos[indiceEdicao] = { curso, regime, carga };
+      indiceEdicao = null;
+    }
+      document.getElementById('curso').value = '';
+      document.getElementById('regim').value = '';
   }
 
    function editarCurso(indice) {
       // implementar a função editar a partir de um indice 
       
-    // Verifica se o índice é válido
-        if (indice >= 0 && indice < lista.length) {
-          lista[indice] = novoValor;
-          return true; // Sucesso
-        }
-      console.log("Índice inválido!");
-      return false;
+        
     }
 	
 	function removerCurso(indice) {
       // implementar a função remover a partir de um indice
-      if (pilhacursos.length === 0) {
-        alert('A pilha está vazia!');
-      } else {
-        const removido = pilhaCursos.pop();
-        alert('Removido: ' + removido.nome + ' - ' + removido.regime + '-' + removido.carga);
-        mostrarLista();
-      }
+      
     }	
 	
 
