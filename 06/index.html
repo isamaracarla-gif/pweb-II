@@ -25,7 +25,7 @@
 			"<td>" + i + "</td>" +
 			"<td>" + curso.nome + "</td>" +
 			"<td>" + regime.curso + "</td>" +
-			"<td>" +
+			"<td>" + carga.curso + "</td>" +
 				"<div class='mt-3 d-flex gap-2'>" +
 				  "<button class='btn btn-secondary' onclick='editarcurso(" + i + ")'>Editar</button>" +
 				  "<button class='btn btn-danger' onclick='removercurso(" + i + ")'>Remover</button>" +
@@ -39,7 +39,8 @@
 	
 	function limpaCampos() {
 	  document.getElementById('nome').value = '';
-      document.getElementById('curso').value = '';
+    document.getElementById('curso').value = '';
+    document.getElementById('carga').value = '';
 	}
 
 
@@ -52,7 +53,7 @@
       }
 
       const pessoa = pilhacursos[indice];
-      alert('Na posição ' + indice + ' está: Nome: ' +curso.nome + ' - Regime: ' + regime.curso);
+      alert('Na posição ' + indice + ' está: Nome: ' +curso.nome + ' - Regime: ' + regime.curso + '- carga-horaria: ' + carga.curso  );
     }
 
     function limparLista() {
