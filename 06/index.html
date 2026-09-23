@@ -78,7 +78,17 @@
 	
 	function salvar() {
 		// implementar função salvar
+      const fs = require('fs');{
+    try {
+        const jsonString = JSON.stringify(dados, null, 2);
+        fs.writeFileSync(nomeArquivo, jsonString, 'utf-8');
+        console.log("Dados salvos com sucesso!");
+        return true;
+    } catch (erro) {
+        console.error("Erro ao salvar:", erro);
+        return false;}
     }
+  }
 
    function editarCurso(indice) {
       // implementar a função editar a partir de um indice 
