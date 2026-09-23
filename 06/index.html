@@ -81,17 +81,16 @@
     }
 
    function editarCurso(indice) {
-      // implementar a função editar a partir de um indice
-      function editarPorIndice(lista, indice, novoValor) {
+      // implementar a função editar a partir de um indice 
+      
     // Verifica se o índice é válido
         if (indice >= 0 && indice < lista.length) {
           lista[indice] = novoValor;
           return true; // Sucesso
+        }
+      console.log("Índice inválido!");
+      return false;
     }
-    console.log("Índice inválido!");
-    return false;
-    }
-  }
 	
 	function removerCurso(indice) {
       // implementar a função remover a partir de um indice
