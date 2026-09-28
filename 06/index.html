@@ -83,13 +83,15 @@
     const carga = document.getElementById('carga').value.trim();
 
     if (indiceEdicao == null) {
+      //adiconando existente
       pilhacursos.push({nome, regime, carga});
-      indiceEdicao == null;
     }
     else{
+      // editando existente
       pilhacursos[indiceEdicao] = { nome, regime, carga };
-      indiceEdicao = null;
+      indiceEdicao = null; // reseta o modo de edição
     }
+    // limpa formulário
       document.getElementById('nome').value = '';
       document.getElementById('regime').value = '';
       document.getElementById('carga').value = '';
