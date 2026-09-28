@@ -10,7 +10,7 @@
     
   <script>
     
-    let pilhacursos = [];
+    let pilhaCursos = [];
 	
 	let indiceEdicao = null; // controla se estamos editando alguém
 
@@ -18,8 +18,8 @@
       const corpo = document.getElementById('tabelaCorpo');
       corpo.innerHTML = ''; // limpa o corpo da tabela
 
-      for (let i = 0; i < pilhacursos.length; i++) {
-        const pessoa = pilhacursos[i];
+      for (let i = 0; i < pilhaCursos.length; i++) {
+        const pessoa = pilhaCursos[i];
 		const linha =
 		  "<tr>" +
 			"<td>" + i + "</td>" +
@@ -47,32 +47,32 @@
     function posicao() {
       const indice = Number(prompt('Qual posição da lista deseja consultar?'));
 
-      if (indice < 0 || indice >= pilhacursos.length) {
+      if (indice < 0 || indice >= pilhaCursos.length) {
         alert('Posição inválida!');
         return;
       }
 
-      const pessoa = pilhacursos[indice];
+      const pessoa = pilhaCursos[indice];
       alert('Na posição ' + indice + ' está: Nome: ' +curso.nome + ' - Regime: ' + curso.regime + '- carga horaria: ' + curso.carga  );
     }
 
     function limparLista() {
-      pilhacursos = [];
+      pilhaCursos = [];
       mostrarLista();
     }
 
     function remover() {
-      if (pilhacursos.length === 0) {
+      if (pilhaCursos.length === 0) {
         alert('A pilha está vazia!');
       } else {
-        const removido = pilhacursos.pop();
+        const removido = pilhaCursos.pop();
         alert('Removido: ' + removido.nome + ' - ' + removido.regime + ' - ' + removido.carga);
         mostrarLista();
       }
     }
 
     function inverterPilha() {
-      pilhacursos.reverse();
+      pilhaCursos.reverse();
       mostrarLista();
     }
 	
@@ -88,7 +88,7 @@
     }
     else{
       // editando existente
-      pilhacursos[indiceEdicao] = { nome, regime, carga };
+      pilhaCursos[indiceEdicao] = { nome, regime, carga };
       indiceEdicao = null; // reseta o modo de edição
     }
     // limpa formulário
@@ -103,7 +103,7 @@
 
    function editarCurso(indice) {
       // implementar a função editar a partir de um indice 
-      const curso = pilhacursos[indice];
+      const curso = pilhaCursos[indice];
       document.getElementById('nome').value = nome.curso;
       document.getElementById('regime').value = regime.curso;
       document.getElementById('carga').value = carga.curso;
