@@ -19,7 +19,7 @@
       corpo.innerHTML = ''; // limpa o corpo da tabela
 
       for (let i = 0; i < pilhacursos.length; i++) {
-        const pessoa = pilhacursos[i];
+        const curso = pilhacursos[i];
 		const linha =
 		  "<tr>" +
 			"<td>" + i + "</td>" +
@@ -97,7 +97,7 @@
       }
     if (indiceEdicao === null) {
       //adiconando existente
-      pilhacursos.push
+        pilhacursos.push
       ({
           nome: nome,
           regime: regime,
@@ -111,8 +111,8 @@
           nome: nome,
           regime: regime,
           carga: carga // reseta o modo de edição
-    };
-     alert('Curso atualizado com sucesso!');
+    };     alert('Curso atualizado com sucesso!');
+
         indiceEdicao = null;
       }
 
