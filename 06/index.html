@@ -91,13 +91,16 @@
       indiceEdicao = null;
     }
       document.getElementById('curso').value = '';
-      document.getElementById('regim').value = '';
+      document.getElementById('regime').value = '';
   }
 
    function editarCurso(indice) {
       // implementar a função editar a partir de um indice 
-      
-        
+      const curso = pilhacursos[indice];
+      document.getElementById('curso').value = curso.nome;
+      document.getElementById('regime').value = regime.curso;
+      document.getElementById('carga').value = carga.curso;
+       indiceEdicao = indice; // marca qual está sendo editada 
     }
 	
 	function removerCurso(indice) {
