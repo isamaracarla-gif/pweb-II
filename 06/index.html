@@ -53,7 +53,7 @@
       }
 
       const pessoa = pilhacursos[indice];
-      alert('Na posição ' + indice + ' está: Nome: ' +curso.nome + ' - Regime: ' + regime.curso + '- carga horaria: ' + carga.curso  );
+      alert('Na posição ' + indice + ' está: Nome: ' +curso.nome + ' - Regime: ' + curso.regime + '- carga horaria: ' + curso.carga  );
     }
 
     function limparLista() {
@@ -66,7 +66,7 @@
         alert('A pilha está vazia!');
       } else {
         const removido = pilhacursos.pop();
-        alert('Removido: ' + removido.nome + ' - ' + removido.regime);
+        alert('Removido: ' + removido.nome + ' - ' + removido.regime + ' - ' + removido.carga);
         mostrarLista();
       }
     }
@@ -78,19 +78,19 @@
 	
 	function salvar() {
 		// implementar função salvar
-    const curso = document.getElementById('curso').value.trim();
+    const curso = document.getElementById('nome').value.trim();
     const regime = document.getElementById('regime').value.trim();
     const carga = document.getElementById('carga').value.trim();
 
     if (indiceEdicao == null) {
-      pilhacursos.push({curso, regime, carga});
+      pilhacursos.push({nome, regime, carga});
       indiceEdicao == null;
     }
     else{
-      pilhacursos[indiceEdicao] = { curso, regime, carga };
+      pilhacursos[indiceEdicao] = { nome, regime, carga };
       indiceEdicao = null;
     }
-      document.getElementById('curso').value = '';
+      document.getElementById('nome').value = '';
       document.getElementById('regime').value = '';
       document.getElementById('carga').value = '';
       mostrarLista();
@@ -102,16 +102,13 @@
    function editarCurso(indice) {
       // implementar a função editar a partir de um indice 
       const curso = pilhacursos[indice];
-      document.getElementById('curso').value = curso.nome;
+      document.getElementById('nome').value = nome.nome;
       document.getElementById('regime').value = regime.curso;
       document.getElementById('carga').value = carga.curso;
        indiceEdicao = indice; // marca qual está sendo editada 
     }
 	
-	function removerCurso(indice) {
-      // implementar a função remover a partir de um indice
-      
-    }	
+	
 	
 
 	
@@ -138,7 +135,7 @@
 
         <div class="col-md-5">
           <label class="form-label">Carga Horária</label>
-          <input type="text" id="regime" class="form-control" placeholder="Ex: 1200">
+          <input type="text" id="carga" class="form-control" placeholder="Ex: 1200">
         </div>
 
 
