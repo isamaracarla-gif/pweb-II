@@ -39,36 +39,45 @@
 	
 	function limpaCampos() {
 	  document.getElementById('nome').value = '';
-    document.getElementById('curso').value = '';
+    document.getElementById('regime').value = '';
     document.getElementById('carga').value = '';
 	}
 
 
     function posicao() {
-      const indice = Number(prompt('Qual posição da lista deseja consultar?'));
-
-      if (indice < 0 || indice >= pilhaCursos.length) {
+      const indice = Number(
+        prompt('Qual posição da lista deseja consultar?')
+      );
+      if (
+        isNaN(indice) ||
+        indice < 0 ||
+        indice >= pilhacursos.length
+      ) {
         alert('Posição inválida!');
         return;
       }
-
-      const pessoa = pilhaCursos[indice];
-      alert('Na posição ' + indice + ' está: Nome: ' +curso.nome + ' - Regime: ' + curso.regime + '- carga horaria: ' + curso.carga  );
+      const curso = pilhacursos[indice];
+      alert(
+        'Na posição ' + indice +
+        ' está:\n\n' +
+        'Nome: ' + curso.nome +
+        '\nRegime: ' + curso.regime +
+        '\nCarga horária: ' + curso.carga
+      );
     }
 
     function limparLista() {
-      pilhaCursos = [];
+      pilhacursos = [];
       mostrarLista();
     }
 
     function remover() {
-      if (pilhaCursos.length === 0) {
-        alert('A pilha está vazia!');
-      } else {
-        const removido = pilhaCursos.pop();
-        alert('Removido: ' + removido.nome + ' - ' + removido.regime + ' - ' + removido.carga);
-        mostrarLista();
-      }
+       const removido = pilhacursos.splice(indice, 1)[0];
+      alert(
+        'Curso removido:\n\n' +
+        removido.nome
+      );
+      mostrarLista();
     }
 
     function inverterPilha() {
@@ -81,21 +90,37 @@
     const nome = document.getElementById('nome').value.trim();
     const regime = document.getElementById('regime').value.trim();
     const carga = document.getElementById('carga').value.trim();
-
-    if (indiceEdicao == null) {
+      // Verifica se os campos estão preenchidos
+      if (nome === '' || regime === '' || carga === '') {
+        alert('Preencha todos os campos!');
+        return;
+      }
+    if (indiceEdicao === null) {
       //adiconando existente
-      pilhacursos.push({nome, regime, carga});
+      pilhacursos.push({
+          nome: nome,
+          regime: regime,
+          carga: carga
+        });
+        alert('Curso cadastrado com sucesso!');
     }
     else{
       // editando existente
-      pilhaCursos[indiceEdicao] = { nome, regime, carga };
-      indiceEdicao = null; // reseta o modo de edição
-    }
+       pilhacursos[indiceEdicao] = {
+          nome: nome,
+          regime: regime,
+          carga: carga // reseta o modo de edição
+    };
+     alert('Curso atualizado com sucesso!');
+        indiceEdicao = null;
+      }
+
+
     // limpa formulário
-      document.getElementById('nome').value = '';
-      document.getElementById('regime').value = '';
-      document.getElementById('carga').value = '';
+      limpaCampos();
+      // Atualiza tabela
       mostrarLista();
+;
   }
 
 
@@ -103,11 +128,13 @@
 
    function editarCurso(indice) {
       // implementar a função editar a partir de um indice 
-      const curso = pilhaCursos[indice];
-      document.getElementById('nome').value = nome.curso;
-      document.getElementById('regime').value = regime.curso;
-      document.getElementById('carga').value = carga.curso;
-       indiceEdicao = indice; // marca qual está sendo editada 
+      const curso = pilhacursos[indice];
+      // Coloca os dados do curso nos campos
+      document.getElementById('nome').value = curso.nome;
+      document.getElementById('regime').value = curso.regime;
+      document.getElementById('carga').value = curso.carga;
+      // Guarda o índice que está sendo editado
+      indiceEdicao = indice; 
     }
 	
 	
